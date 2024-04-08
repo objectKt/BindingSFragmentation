@@ -1,32 +1,10 @@
-![](https://img.shields.io/github/v/release/weikaiyun/EasyFragmentation.svg)
-[![](https://jitpack.io/v/weikaiyun/EasyFragmentation.svg)](https://jitpack.io/#weikaiyun/EasyFragmentation)
-# SFragmentation(Super Fragmentation)
 
+# BindingSFragmentation(fork from SFragmentation)
 
 #### 框架负责管理fragment的各种操作，相比于google新出的navigation框架，更加灵活多变，易于使用。
 #### 框架对于fragment可见性判断，懒加载，转场动画有比较好的处理。
 #### 框架的源码简单易懂， 不存在复杂的逻辑。
 
-### 推荐使用NoBackStack分支。
-
-#### gradle使用:
-
-```
-allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
-}
-```
-```
-dependencies {
-	//请使用最新版本
-	implementation 'com.github.weikaiyun.SFragmentation:fragmentation:latest'
-	//滑动返回，可选
-	implementation 'com.github.weikaiyun.SFragmentation:fragmentation_swipeback:latest'
-}
-```
 ##### demo有比较详细的使用示例， 欢迎star。
 下面2,3,4,5中API的用法，有对应的childFragment的操作接口，使用过程中请务必弄清楚fragment的层级关系，使用对应的接口！！！
 
@@ -107,26 +85,4 @@ onVisible();
 onInvisible();
 
 ```
-
-#####  如有使用问题欢迎提交issues
-
-
 ***
-#### Thanks to [Fragmentation](https://github.com/YoKeyword/Fragmentation)。
-***
-### LICENSE
-```
-Copyright 2019 weikaiyun
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
