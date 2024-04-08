@@ -1,7 +1,8 @@
-package com.weikaiyun.demo.ui.main
+package com.weikaiyun.demo.ui.base
 
 import android.app.Application
 import android.content.res.Resources
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 
 /**
@@ -21,6 +22,6 @@ class MainVM(application: Application) : AndroidViewModel(application) {
      * 数据回收
      */
     fun cleanActivityThings() {
-
+        Toast.makeText(context, "点击了屏幕", Toast.LENGTH_SHORT).show()
     }
 }

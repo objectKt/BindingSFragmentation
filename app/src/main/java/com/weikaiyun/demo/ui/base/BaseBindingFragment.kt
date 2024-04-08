@@ -7,13 +7,11 @@ import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.weikaiyun.demo.ui.main.MainActivity
-import com.weikaiyun.demo.ui.main.MainVM
 import lib.dc.fragmentation.SupportFragment
 
 abstract class BaseBindingFragment<B : ViewDataBinding> : SupportFragment(), OnClickListener {
 
-    val activity: MainActivity? by lazy { requireActivity() as MainActivity }
+    private val activity: MainActivity? by lazy { requireActivity() as MainActivity }
     val vm: MainVM? by lazy { activity?.vm }
 
     val binding: B

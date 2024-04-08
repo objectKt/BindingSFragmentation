@@ -3,7 +3,7 @@ package com.weikaiyun.demo.ui.demo
 import android.os.Bundle
 import android.view.View
 import com.weikaiyun.demo.ui.base.BaseBindingFragment
-import com.weikaiyun.fragmentargument.argument
+import lib.dc.fragmentation.fragmentargument.argument
 import com.weikaiyun.fragmentation.R
 import com.weikaiyun.fragmentation.databinding.FragmentDemoBinding
 import com.weikaiyun.util.trigger
@@ -29,20 +29,7 @@ class DemoFragment1 : BaseBindingFragment<FragmentDemoBinding>() {
         binding.title.text = "DemoFragment$param1"
         binding.button.text = param2
         binding.button.setOnClickListener {
-//            自定义动画
-//            it.trigger(400) {
-//                extraTransaction()
-//                    .setCustomAnimations(R.anim.h_fragment_enter, R.anim.h_fragment_pop_exit,
-//                        R.anim.h_fragment_pop_enter, R.anim.h_fragment_exit)
-//                    .start(DemoFragment2.newInstance(2, "start3"))
-//            }
-
-//            正常start
-//            it.trigger(400) {
-//                start(DemoFragment2.newInstance(2, "start3"))
-//            }
-
-//          带返回结果的start
+            // 带返回结果的start
             it.trigger(400) {
                 startForResult(DemoFragment2.newInstance(2, "start3"), REQUEST_CODE)
             }

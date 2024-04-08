@@ -1,9 +1,8 @@
-package com.weikaiyun.demo.ui.main
+package com.weikaiyun.demo.ui.base
 
 import android.os.Bundle
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
-import com.weikaiyun.demo.ui.base.BaseBindingActivity
 import com.weikaiyun.fragmentation.R
 import lib.dc.fragmentation.SupportHelper
 import com.weikaiyun.fragmentation.databinding.ActivityDemoMainBinding

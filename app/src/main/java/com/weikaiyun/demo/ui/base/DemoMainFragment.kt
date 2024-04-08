@@ -1,13 +1,15 @@
-package com.weikaiyun.demo.ui.main
+package com.weikaiyun.demo.ui.base
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
-import com.weikaiyun.demo.ui.base.BaseBindingFragment
+import com.weikaiyun.demo.ui.main.CommunityFragment
+import com.weikaiyun.demo.ui.main.HomeFragment
+import com.weikaiyun.demo.ui.main.MineFragment
+import com.weikaiyun.demo.ui.main.RemindFragment
 import com.weikaiyun.fragmentation.R
-import lib.dc.fragmentation.SupportHelper
 import com.weikaiyun.fragmentation.databinding.FragmentDemoMainBinding
 import com.weikaiyun.util.ResUtils
+import lib.dc.fragmentation.SupportHelper
 
 class DemoMainFragment : BaseBindingFragment<FragmentDemoMainBinding>() {
 
@@ -20,13 +22,13 @@ class DemoMainFragment : BaseBindingFragment<FragmentDemoMainBinding>() {
 
     private var currentTab = HOME
 
-    private val iconArr = arrayListOf<Drawable>(
+    private val iconArr = arrayListOf(
         ResUtils.getDrawable(R.drawable.icon_bottom_homepage),
         ResUtils.getDrawable(R.drawable.icon_bottom_remind),
         ResUtils.getDrawable(R.drawable.icon_bottom_community),
         ResUtils.getDrawable(R.drawable.icon_bottom_mine)
     )
-    private val selectedIconArr = arrayListOf<Drawable>(
+    private val selectedIconArr = arrayListOf(
         ResUtils.getDrawable(R.drawable.icon_bottom_homepage_selected),
         ResUtils.getDrawable(R.drawable.icon_bottom_remind_selected),
         ResUtils.getDrawable(R.drawable.icon_bottom_community_selected),
@@ -39,31 +41,21 @@ class DemoMainFragment : BaseBindingFragment<FragmentDemoMainBinding>() {
 
     override fun initView(view: View, savedInstanceState: Bundle?) {
         binding.flContainer.setOnClickListener {
-            _mActivity.finish()
+            //_mActivity.finish()
+            vm?.cleanActivityThings()
         }
-        val homeFragmentInStack: HomeFragment? =
-            SupportHelper.findFragment(childFragmentManager, HomeFragment::class.java)
+        val homeFragmentInStack: HomeFragment? = SupportHelper.findFragment(childFragmentManager, HomeFragment::class.java)
         if (homeFragmentInStack != null) {
             homeFragment = homeFragmentInStack
-            remindFragment =
-                SupportHelper.findFragment(childFragmentManager, RemindFragment::class.java)
-            communityFragment =
-                SupportHelper.findFragment(childFragmentManager, CommunityFragment::class.java)
-            mineFragment =
-                SupportHelper.findFragment(childFragmentManager, MineFragment::class.java)
+            remindFragment = SupportHelper.findFragment(childFragmentManager, RemindFragment::class.java)
+            communityFragment = SupportHelper.findFragment(childFragmentManager, CommunityFragment::class.java)
+            mineFragment = SupportHelper.findFragment(childFragmentManager, MineFragment::class.java)
         } else {
             homeFragment = HomeFragment()
             remindFragment = RemindFragment()
             communityFragment = CommunityFragment()
             mineFragment = MineFragment()
-            loadMultipleRootFragment(
-                R.id.fl_container,
-                currentTab,
-                homeFragment,
-                remindFragment,
-                communityFragment,
-                mineFragment
-            )
+            loadMultipleRootFragment(R.id.fl_container, currentTab, homeFragment, remindFragment, communityFragment, mineFragment)
         }
 
         binding.clHome.setOnClickListener {
@@ -93,7 +85,6 @@ class DemoMainFragment : BaseBindingFragment<FragmentDemoMainBinding>() {
                 checkTab(MINE)
             }
         }
-
         checkTab(HOME)
     }
 

@@ -1,4 +1,4 @@
-package com.weikaiyun.fragmentargument
+package lib.dc.fragmentation.fragmentargument
 
 import android.os.Bundle
 import android.os.Parcelable

@@ -3,7 +3,7 @@ package com.weikaiyun.demo.ui.demo
 import android.os.Bundle
 import android.view.View
 import com.weikaiyun.demo.ui.base.BaseBindingFragment
-import com.weikaiyun.fragmentargument.argument
+import lib.dc.fragmentation.fragmentargument.argument
 import com.weikaiyun.fragmentation.R
 import com.weikaiyun.fragmentation.databinding.FragmentDemo4Binding
 import com.weikaiyun.util.trigger
@@ -32,10 +32,10 @@ class DemoFragment4: BaseBindingFragment<FragmentDemo4Binding>() {
         binding.button1.text = param2
         binding.button1.setOnClickListener {
             it.trigger(400) {
-//                extraTransaction()
-//                    .setCustomAnimations(R.anim.h_fragment_enter, R.anim.h_fragment_pop_exit,
-//                        R.anim.h_fragment_pop_enter, R.anim.h_fragment_exit)
-//                    .popTo(DemoFragment1::class.java.name, false)
+                // 参数 1 = 从这个页面干掉栈上所有页面，且回到这个页面的上一页
+                // 页面栈 DemoFragment3 1 2 3 4 => 1 2
+                // 页面栈 DemoFragment2 1 2 3 4 => 1
+                // 页面栈 DemoFragment1 1 2 3 4 => main
                 popTo(DemoFragment1::class.java, true)
             }
         }
@@ -44,12 +44,9 @@ class DemoFragment4: BaseBindingFragment<FragmentDemo4Binding>() {
 
         binding.button2.setOnClickListener {
             it.trigger(1000) {
-//                extraTransaction()
-//                    .setCustomAnimations(R.anim.h_fragment_enter, R.anim.h_fragment_pop_exit,
-//                        R.anim.h_fragment_pop_enter, R.anim.h_fragment_exit)
-//                    .startWithPopTo(DemoFragment5.newInstance(5, "testStartWithPopTo"),
-//                    DemoFragment1::class.java.name, false)
                 startWithPopTo(
+                    // 干掉 1 页面栈上所有页面，保留 1 页面且前往 5 页面
+                    // 页面栈 1 2 3 4 => 1 5
                     DemoFragment5.newInstance(5, "testStartWithPopTo"),
                     DemoFragment1::class.java, false)
             }
@@ -58,10 +55,8 @@ class DemoFragment4: BaseBindingFragment<FragmentDemo4Binding>() {
         binding.button3.text = param4
         binding.button3.setOnClickListener {
             it.trigger(1000) {
-//                extraTransaction()
-//                    .setCustomAnimations(R.anim.h_fragment_enter, R.anim.h_fragment_pop_exit,
-//                        R.anim.h_fragment_pop_enter, R.anim.h_fragment_exit)
-//                    .startWithPop(DemoFragment5.newInstance(5, "testStartWithPop"))
+                // 干掉当前页面 4 然后前往 5 页面
+                // 页面栈 1 2 3 4 => 1 2 3 5
                 startWithPop(DemoFragment5.newInstance(5, "testStartWithPop"))
             }
         }

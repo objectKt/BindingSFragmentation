@@ -14,7 +14,7 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>() {
     override fun initView(view: View, savedInstanceState: Bundle?) {
         binding.jump.setOnClickListener {
             //此处使用_mActivity.start, 则DemoFragment1与DemoMainFragment平级
-            activity?.start(DemoFragment1.newInstance(1, "start2"))
+            _mActivity?.start(DemoFragment1.newInstance(1, "start2"))
         }
     }
 

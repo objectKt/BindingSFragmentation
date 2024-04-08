@@ -3,7 +3,7 @@ package com.weikaiyun.demo.ui.demo
 import android.os.Bundle
 import android.view.View
 import com.weikaiyun.demo.ui.base.BaseBindingFragment
-import com.weikaiyun.fragmentargument.argument
+import lib.dc.fragmentation.fragmentargument.argument
 import com.weikaiyun.fragmentation.R
 import com.weikaiyun.fragmentation.databinding.FragmentDemoBinding
 import com.weikaiyun.util.trigger
