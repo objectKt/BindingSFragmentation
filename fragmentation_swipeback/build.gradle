@@ -1,14 +1,10 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 30
-
+    compileSdk 30
+    namespace 'com.weikaiyun.fragmentation_swipeback"'
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        minSdk 19
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -24,7 +20,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    compileOnly "androidx.appcompat:appcompat:${versions.appcompat}"
+    compileOnly "androidx.appcompat:appcompat:1.2.0"
     compileOnly project(':fragmentation')
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

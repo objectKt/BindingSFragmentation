@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.common.weikaiyun">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:name=".demo.DemoApplication"
+        android:name="com.weikaiyun.demo.DemoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".demo.ui.main.DemoMainActivity"
-            android:theme="@style/AppTheme.NoActionBar.SwipeBack"
-            >
+            android:exported="true"
+            android:name="com.weikaiyun.demo.ui.main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar.SwipeBack">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
