@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">Frag</string>
-    <string name="fragmentation_stack_view">Stack</string>
-    <string name="fragmentation_stack_help">☀: Visible</string>
 </resources>

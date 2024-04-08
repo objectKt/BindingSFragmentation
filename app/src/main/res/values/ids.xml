@@ -2,7 +2,4 @@
 <resources>
     <item name="triggerDelayKey" type="id"/>
     <item name="triggerLastTimeKey" type="id"/>
-
-    <item type="id" name="hierarchy"></item>
-    <item type="id" name="isexpand"></item>
 </resources>

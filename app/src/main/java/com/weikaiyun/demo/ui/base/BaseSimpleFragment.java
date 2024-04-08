@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.weikaiyun.fragmentation.SupportFragment;
+import lib.dc.fragmentation.SupportFragment;
 
 abstract public class BaseSimpleFragment extends SupportFragment {
 

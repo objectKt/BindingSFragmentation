@@ -5,7 +5,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import com.weikaiyun.demo.ui.base.BaseBindingActivity
 import com.weikaiyun.fragmentation.R
-import com.weikaiyun.fragmentation.SupportHelper
+import lib.dc.fragmentation.SupportHelper
 import com.weikaiyun.fragmentation.databinding.ActivityDemoMainBinding
 
 class MainActivity : BaseBindingActivity<ActivityDemoMainBinding>() {

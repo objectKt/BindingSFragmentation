@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.weikaiyun.demo.ui.main.MainActivity
 import com.weikaiyun.demo.ui.main.MainVM
-import com.weikaiyun.fragmentation.SupportFragment
+import lib.dc.fragmentation.SupportFragment
 
 abstract class BaseBindingFragment<B : ViewDataBinding> : SupportFragment(), OnClickListener {
 

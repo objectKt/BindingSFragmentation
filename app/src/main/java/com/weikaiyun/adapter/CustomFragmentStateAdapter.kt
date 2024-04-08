@@ -1,8 +1,8 @@
 package com.weikaiyun.adapter
 
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.weikaiyun.fragmentation.SupportActivity
-import com.weikaiyun.fragmentation.SupportFragment
+import lib.dc.fragmentation.SupportActivity
+import lib.dc.fragmentation.SupportFragment
 
 //适用viewpager2
 

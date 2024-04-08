@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import com.weikaiyun.demo.ui.base.BaseBindingFragment
 import com.weikaiyun.fragmentation.R
-import com.weikaiyun.fragmentation.SupportHelper
+import lib.dc.fragmentation.SupportHelper
 import com.weikaiyun.fragmentation.databinding.FragmentDemoMainBinding
 import com.weikaiyun.util.ResUtils
 

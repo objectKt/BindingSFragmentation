@@ -6,7 +6,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.viewbinding.ViewBinding
-import com.weikaiyun.fragmentation.SupportActivity
+import lib.dc.fragmentation.SupportActivity
 
 abstract class BaseBindingActivity<B : ViewBinding> : SupportActivity() {
 
